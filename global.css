@@ -1,0 +1,461 @@
+/* html, body */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* font-size: 10px; */
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #1a202c;
+  background: #2f855a;
+  background: radial-gradient(circle, #48bb78 40%, #2f855a 100%);
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 95vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 5vh;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background: transparent;
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  height: 30px;
+}
+
+nav ul {
+  text-align: right;
+  margin: 0;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 0.5em;
+  font-size: 0.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  -webkit-box-shadow: 0 0.3rem 0 0 #4c51bf;
+          box-shadow: 0 0.3rem 0 0 #4c51bf;
+}
+
+nav a:hover {
+  color: #fff;
+  -webkit-box-shadow: 0 0.3rem 0 0 #4c51bf;
+          box-shadow: 0 0.3rem 0 0 #4c51bf;
+}
+
+#app {
+  margin-top: 3rem;
+}
+
+.reason {
+  margin: auto;
+  margin-top: 10rem;
+  background: #fff;
+  width: 60%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 3px solid #bee3f8;
+  position: relative;
+  line-height: 2.0;
+  padding: 0 2rem;
+}
+
+.reason p {
+  text-align: justify;
+  color: #2d3748;
+}
+
+@media (max-width: 900px) {
+  .reason {
+    width: 90%;
+  }
+  nav {
+    background: #2f855a;
+  }
+}
+
+/* Headers and Paragraphs */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #1a202c;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+/* Flexbox and Grid */
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.grid3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 600px) {
+  .grid2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .grid3 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+/* Components */
+.success-message {
+  background-color: #c6f6d5;
+  color: #22543d;
+  padding: 0.5rem;
+}
+
+.failure-message {
+  background-color: #fed7d7;
+  color: #742a2a;
+  padding: 0.5rem;
+}
+
+.warning-message {
+  background-color: #fefcbf;
+  color: #744210;
+  padding: 0.5rem;
+}
+
+.img-circle {
+  display: block;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-hover {
+  -webkit-box-shadow: 0 0.5em 2em 0 #bdbdbd;
+          box-shadow: 0 0.5em 2em 0 #bdbdbd;
+}
+
+.img-hover:hover {
+  -webkit-box-shadow: 0 0.5em 3em 0 #bdbdbd;
+          box-shadow: 0 0.5em 3em 0 #bdbdbd;
+  opacity: 0.7;
+  -webkit-transition: width 3s ease;
+  transition: width 3s ease;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0.5em 2em 0 #bdbdbd;
+          box-shadow: 0 0.5em 2em 0 #bdbdbd;
+}
+
+.card {
+  margin: 1em 0;
+  padding: 0 1em;
+  border: 1px solid #eeeeee;
+  -webkit-box-shadow: 0 0em 0.5em 0 #e0e0e0;
+          box-shadow: 0 0em 0.5em 0 #e0e0e0;
+}
+
+.card2 {
+  margin: 0 auto;
+  padding: 0 1em;
+  background-color: #eeeeee;
+  border-left: 0.25em solid #247ba0;
+}
+
+hr {
+  background-color: #e0e0e0;
+  margin: 5rem 0;
+  height: 1px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+a {
+  text-decoration: none;
+  color: #247ba0;
+  -webkit-box-shadow: 0 0.3rem 0 0 #4c51bf;
+          box-shadow: 0 0.3rem 0 0 #4c51bf;
+}
+
+a:not(.btn):hover {
+  color: #70c1b3;
+  -webkit-box-shadow: 0 0.3rem 0 0 #4c51bf;
+          box-shadow: 0 0.3rem 0 0 #4c51bf;
+}
+
+.btn, button {
+  cursor: pointer;
+  font-size: 0.8rem;
+  min-width: 4rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 0.5rem 0;
+  border-radius: 0.4em;
+  background-color: #247ba0;
+  color: #fff;
+}
+
+.btn:hover, button:hover {
+  opacity: 0.95;
+  -webkit-transition: width 2s ease;
+  transition: width 2s ease;
+}
+
+.btn:active, button:active {
+  opacity: 0.8;
+  -webkit-transition: width 2s ease;
+  transition: width 2s ease;
+}
+
+.btn.disabled, button.disabled {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.btn.disabled:active, button.disabled:active {
+  opacity: 1;
+}
+
+.btn.delete, button.delete {
+  background-color: #c53030;
+}
+
+.btn.success, button.success {
+  background-color: #2f855a;
+}
+
+table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+}
+
+table th {
+  text-align: left;
+  border-bottom: 1px solid #4a5568;
+}
+
+table tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+table td:hover {
+  background-color: #e0e0e0;
+}
+
+code {
+  font-family: Consolas;
+  font-size: 0.8rem;
+  background-color: #eeeeee;
+  border-left: 0.25em solid #2f855a;
+  border-bottom: 0.1em solid #bdbdbd;
+  display: block;
+  padding: 0.5em;
+  margin: 1em 0;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="file"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea,
+textarea[type=text] {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5em;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 5px;
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus,
+textarea[type=text]:focus {
+  border: 0.1rem solid #4299e1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="file"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+textarea[type=text]::-webkit-input-placeholder {
+  color: #9e9e9e;
+  opacity: 1;
+}
+
+input[type="text"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="file"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+textarea[type=text]:-ms-input-placeholder {
+  color: #9e9e9e;
+  opacity: 1;
+}
+
+input[type="text"]::-ms-input-placeholder,
+input[type="password"]::-ms-input-placeholder,
+input[type="email"]::-ms-input-placeholder,
+input[type="search"]::-ms-input-placeholder,
+input[type="number"]::-ms-input-placeholder,
+input[type="file"]::-ms-input-placeholder,
+input[type="tel"]::-ms-input-placeholder,
+input[type="url"]::-ms-input-placeholder,
+select::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+textarea[type=text]::-ms-input-placeholder {
+  color: #9e9e9e;
+  opacity: 1;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="search"]::placeholder,
+input[type="number"]::placeholder,
+input[type="file"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+select::placeholder,
+textarea::placeholder,
+textarea[type=text]::placeholder {
+  color: #9e9e9e;
+  opacity: 1;
+}
+
+label {
+  font-size: 0.75rem;
+  color: #9e9e9e;
+}
+/*# sourceMappingURL=global.css.map */
